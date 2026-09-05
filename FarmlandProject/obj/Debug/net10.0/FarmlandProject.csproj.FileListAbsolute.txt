@@ -1,0 +1,14 @@
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\bin\Debug\net10.0\FarmlandProject.exe
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\bin\Debug\net10.0\FarmlandProject.deps.json
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\bin\Debug\net10.0\FarmlandProject.runtimeconfig.json
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\bin\Debug\net10.0\FarmlandProject.dll
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\bin\Debug\net10.0\FarmlandProject.pdb
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\FarmlandProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\FarmlandProject.AssemblyInfoInputs.cache
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\FarmlandProject.AssemblyInfo.cs
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\FarmlandProject.csproj.CoreCompileInputs.cache
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\FarmlandProject.dll
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\refint\FarmlandProject.dll
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\FarmlandProject.pdb
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\FarmlandProject.genruntimeconfig.cache
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\ref\FarmlandProject.dll
