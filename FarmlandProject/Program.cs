@@ -20,8 +20,8 @@ namespace FarmlandProject
                     Console.WriteLine("1. Plant crop");
                     Console.WriteLine("2. Harvest crop");
                     Console.WriteLine("3. Buy animal");
-                    Console.WriteLine("4. Show farm");
-                    Console.WriteLine("5. Sell");
+                    Console.WriteLine("4. Sell");
+                    Console.WriteLine("5. Show status");
                     Console.WriteLine("6. Exit");
                     Console.WriteLine();
                     Console.Write("Enter choice (1-6): ");
@@ -46,10 +46,10 @@ namespace FarmlandProject
                             money.BuyAnimal();
                             break;
                         case 4:
-                            farm.ShowStatus();
+                            money.SellAnimal();
                             break;
                         case 5:
-                            money.SellAnimal();
+                            farm.ShowStatus();
                             break;
                         case 6:
                             Console.WriteLine("Exiting program. Goodbye!");
@@ -146,7 +146,7 @@ namespace FarmlandProject
         {
             if (_animals > 0)
             {
-                _totalGold++;
+                _totalGold+= 150;
                     _animals--;
                 Console.WriteLine("An animal has been sold");
             } else

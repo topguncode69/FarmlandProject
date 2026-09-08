@@ -12,3 +12,4 @@ C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\ref
 C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\FarmlandProject.pdb
 C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\FarmlandProject.genruntimeconfig.cache
 C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\ref\FarmlandProject.dll
+C:\Users\Lana\source\repos\FarmlandProject\FarmlandProject\obj\Debug\net10.0\FarmlandProject.sourcelink.json
