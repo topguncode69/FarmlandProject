@@ -8,9 +8,11 @@ namespace FarmlandProject
         {
             try
             {
-                var crop = new Crop();
+                var time = new Time();
+                var crop = new Crop(time);
                 var money = new Money();
-                var farm = new Farm(crop, money);
+                var farm = new Farm(crop, money, time);
+                
 
                 bool exit = false;
                 while (!exit)
@@ -23,13 +25,14 @@ namespace FarmlandProject
                     Console.WriteLine("4. Sell");
                     Console.WriteLine("5. Show status");
                     Console.WriteLine("6. Exit");
+                    Console.WriteLine("7. Sleep");
                     Console.WriteLine();
                     Console.Write("Enter choice (1-6): ");
 
                     string input = Console.ReadLine() ?? string.Empty;
                     if (!int.TryParse(input, out int userInput))
                     {
-                        Console.WriteLine("Invalid input. Please enter a number between 1 and 6.");
+                        Console.WriteLine("Invalid input. Please enter a number between 1 and 7.");
                         Console.WriteLine();
                         continue;
                     }
@@ -55,6 +58,9 @@ namespace FarmlandProject
                             Console.WriteLine("Exiting program. Goodbye!");
                             exit = true;
                             break;
+                        case 7:
+                            time.Tick();
+                            break;
                         default:
                             Console.WriteLine("Invalid choice. Please select a number between 1 and 6.");
                             break;
@@ -75,18 +81,27 @@ namespace FarmlandProject
             }
         }
     }
-
+    public class Time
+    { 
+        private int _day = 0;
+        public int Day => _day;
+        public void Tick()
+        {
+            _day += 1;
+        }
+    }
     public class Farm // the farm class with the showstatus
     {
         private readonly Crop _crop;
         private readonly Money _animal;
         private readonly Money _totalGold;
-
-        public Farm(Crop crop, Money money)
+        private readonly Time _time1;
+        public Farm(Crop crop, Money money, Time time2)
         {
             _crop = crop ?? throw new ArgumentNullException(nameof(crop));
             _animal = money ?? throw new ArgumentNullException(nameof(money));
             _totalGold = money ?? throw new ArgumentNullException(nameof(money));
+            _time1 = time2 ?? throw new ArgumentNullException(nameof(time2));
         }
 
         public void ShowStatus()
@@ -96,6 +111,7 @@ namespace FarmlandProject
             Console.WriteLine($"Harvested = {_crop.Harvested}");
             Console.WriteLine($"Animals = {_animal.Animals}");
             Console.WriteLine($"Money = {_totalGold.TotalGold} Gold");
+            Console.WriteLine($"Day = {_time1.Day}");
 
         }
     }
@@ -104,28 +120,51 @@ namespace FarmlandProject
     {
         private int _planted = 0;
         private int _harvested = 0;
+        private bool _grown = false;
 
+
+        public int _dayPlanted;
         public int Planted => _planted;
         public int Harvested => _harvested;
+        public bool Grown => _grown;
+        
+        
+        
+        private readonly Time _time;
+        public Crop(Time time)
+        {
+            _time = time ?? throw new ArgumentNullException(nameof(time));
+        }  // TIME SYSTEM
 
         public void Plant()
         {
             _planted++;
             Console.WriteLine("You have planted a crop.");
+            _dayPlanted = _time.Day; // assigning to a global day so the game remembers
+            _grown = false;
+
         }
 
         public void Harvest()
         {
-            if (_planted < 1)
+            if (_planted < 1) 
             {
                 Console.WriteLine("You have no planted crops to harvest.");
                 return;
             }
-
+            if (_time.Day <= _dayPlanted + 3)
+            {
+                Console.WriteLine("The plant has not grown yet.");
+                return;
+            }
+          
+            
             _planted--;
             _harvested++;
             Console.WriteLine("You have harvested a crop.");
         }
+
+
     }
 
     public class Money 

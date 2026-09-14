@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FarmlandProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea4abb77b59c1be33d4196d75ccb17af418a2017")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0807c531232c2a5cdf5672481fbc9428f1e6d541")]
 [assembly: System.Reflection.AssemblyProductAttribute("FarmlandProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FarmlandProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
