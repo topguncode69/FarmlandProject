@@ -27,7 +27,7 @@ namespace FarmlandProject
                     Console.WriteLine("6. Exit");
                     Console.WriteLine("7. Sleep");
                     Console.WriteLine();
-                    Console.Write("Enter choice (1-6): ");
+                    Console.Write("Enter choice (1-7): ");
 
                     string input = Console.ReadLine() ?? string.Empty;
                     if (!int.TryParse(input, out int userInput))
