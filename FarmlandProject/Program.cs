@@ -60,6 +60,7 @@ namespace FarmlandProject
                             break;
                         case 7:
                             time.Tick();
+                            Console.WriteLine("Good night, sweet dreams..");
                             break;
                         default:
                             Console.WriteLine("Invalid choice. Please select a number between 1 and 6.");
@@ -81,7 +82,7 @@ namespace FarmlandProject
             }
         }
     }
-    public class Time
+    public class Time // also sleep
     { 
         private int _day = 0;
         public int Day => _day;
