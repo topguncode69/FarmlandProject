@@ -63,7 +63,7 @@ namespace FarmlandProject
                             Console.WriteLine("Good night, sweet dreams..");
                             break;
                         default:
-                            Console.WriteLine("Invalid choice. Please select a number between 1 and 6.");
+                            Console.WriteLine("Invalid choice. Please select a number between 1 and 7.");
                             break;
                     }
 
