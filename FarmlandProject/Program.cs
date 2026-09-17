@@ -89,7 +89,6 @@ namespace FarmlandProject
 
         public Player()
         {
-            // Initialize in correct order: Time first, then Crop (which needs Time)
             time = new Time();
             crop = new Crop(time);
             money = new Money();
@@ -133,7 +132,7 @@ namespace FarmlandProject
             }
         }
 
-        public class Crop // crop class with plant and harvest
+        public class Crop 
         {
             private int _planted = 0;
             private int _harvested = 0;
@@ -213,5 +212,3 @@ namespace FarmlandProject
         }
     }
 }
-
-//nova test commit poruka
