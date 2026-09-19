@@ -90,7 +90,7 @@ namespace FarmlandProject
         public Player()
         {
             time = new Time();
-            crop = new Crop(time);
+            crop = new Crop(time, "Carrot");
             money = new Money();
             farm = new Farm(crop, money, time);
 
@@ -105,6 +105,7 @@ namespace FarmlandProject
         {
             _day += 1;
         }
+
     }
         public class Farm // the farm class with the showstatus
         {
@@ -143,12 +144,13 @@ namespace FarmlandProject
             public int Harvested => _harvested;
             public bool Grown => _grown;
             private readonly Time _time;
-            public Crop(Time time)
+            public string _type;
+
+            public Crop(Time time, String T)
             {
                 _time = time ?? throw new ArgumentNullException(nameof(time));
-
+                this._type = T;
             }  // TIME SYSTEM
-
 
             public void Plant()
             {
